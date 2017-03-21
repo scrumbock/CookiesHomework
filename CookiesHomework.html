@@ -1,0 +1,85 @@
+<!DOCTYPE>
+	<head>
+		<title>Cookies Confectionary</title>
+        <link rel='stylesheet' type='text/css' href='CookiesHomework.css'/>
+        <script type='text/javascript' src='CookiesHomework.js'></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
+		<script src="cookies3.js"></script>
+		<script>
+		 $(document).ready(function(){
+        var current_sugar_count = Cookies.get("sugar-key")
+        $("#sugar-count").html(current_sugar_count)
+     		$("#sugar").click(function(){
+            var current_sugar_count=parseInt(Cookies.get("sugar-key"))
+
+            if (!current_sugar_count) {
+              current_sugar_count = 0
+            }
+            var new_sugar_count = current_sugar_count + 1
+            Cookies.set("sugar-key", new_sugar_count)
+            $("#sugar-count").html(new_sugar_count);
+       		 $("#sugar").fadeOut(1000);
+			     $("#sugar").fadeIn(1000);
+    		 })
+
+        var current_chocolate_count = Cookies.get("chocolate-key")
+        $("#chocolate-count").html(current_chocolate_count)
+        $("#chocolate").click(function(){
+            var current_chocolate_count=parseInt(Cookies.get("chocolate-key"))
+
+            if (!current_chocolate_count) {
+              current_chocolate_count = 0
+            }
+            var new_chocolate_count = current_chocolate_count + 1
+            Cookies.set("chocolate-key", new_chocolate_count)
+            $("#chocolate-count").html(new_chocolate_count);
+       		 $("#chocolate").fadeOut(1000);
+			     $("#chocolate").fadeIn(1000);
+    		 })
+        var current_lemon_count = Cookies.get("lemon-key")
+        $("#lemon-count").html(current_lemon_count)
+     		$("#lemon").click(function(){
+        var current_lemon_count=parseInt(Cookies.get("lemon-key"))
+
+            if (!current_lemon_count) {
+              current_lemon_count = 0
+            }
+            var new_lemon_count = current_lemon_count + 1
+            Cookies.set("lemon-key", new_lemon_count)
+            $("#lemon-count").html(new_lemon_count);
+       		$("#lemon").fadeOut(1000);
+			$("#lemon").fadeIn(1000);
+    		 })
+        $("#Cookies-Clear").click(function() {
+          Cookies.set("sugar-key", 0)
+          $("#sugar-count").html (0)
+          Cookies.set("chocolate-key", 0)
+          $("#chocolate-count").html (0)
+          Cookies.set("lemon-key", 0)
+          $("#lemon-count").html (0)
+        })
+    	 })
+ 		</script>
+	</head>
+		</script>
+	</head>
+	<body>
+    <button id="Cookies-Clear">Cookies be gone!</button>
+		<div id="title"><p>Cookie Confectionary!<p/></div><br>
+    <div class="cookie-container">
+      <div id="sugar"><p>SUGAR</p>
+        <p id="sugar-count">0</p>
+      </div>
+    </div>
+    <div class="cookie-container">
+      <div id="chocolate"><p>CHOCOLATE</p>
+        <p id="chocolate-count">0</p>
+  	   </div>
+      </div>
+    <div class="cookie-container">
+      <div id="lemon"><p>LEMON</p>
+      <p id="lemon-count">0</p>
+      </div>
+    </div>
+	</body>
+</html>

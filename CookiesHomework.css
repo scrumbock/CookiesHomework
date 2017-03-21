@@ -1,0 +1,40 @@
+body {
+	margin: 3em;
+	background-color: #fcf488;
+	text-align: center;
+}
+
+p   {
+	font-family: Helvetica, bold;
+	color: #FFFFFF;
+	font-size: 33px;
+}
+
+div {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    display: inline-block;
+    padding: 2em;
+    margin: 2em;
+}
+
+#chocolate {
+	background-color: #FF9C5B;
+}
+
+#sugar {
+    background-color: #E84A5F;
+}
+
+#lemon {
+    background-color: #FF847C;
+}
+
+#title {
+	height: 200px;
+	width: 200px;
+	border-radius: 100%;
+	background-color: #72360e;
+	margin: 3em;
+}
